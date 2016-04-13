@@ -11,9 +11,18 @@
 (defn sol2 [coll]
   (reduce (fn [c _] (inc c)) 0 coll))
 
-(= (sol2 '(1 2 3 3 1)) 5)
+;; solution 3
+(defn sol3 [coll]
+  (#(if (empty? %1)
+               %2
+               (recur (rest %1) (inc %2)))
+               coll
+               0))
 
-(= (sol2 "Hello World") 11)
+
+(= (sol3 '(1 2 3 3 1)) 5)
+
+(= (sol3 "Hello World") 11)
 
 (= (sol1 [[1 2] [3 4] [5 6]]) 3)
 
