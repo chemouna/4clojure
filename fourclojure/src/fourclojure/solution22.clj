@@ -29,12 +29,16 @@
    (if (empty? s) c
        (recur (next s) (inc c)))))
 
-(= (sol5 '(1 2 3 3 1)) 5)
+;; solution 6
+(defn sol6 [coll]
+  (reduce + (map (fn [_] 1) (seq coll))))
 
-(= (sol5 "Hello World") 11)
+(= (sol6 '(1 2 3 3 1)) 5)
 
-(= (sol1 [[1 2] [3 4] [5 6]]) 3)
+(= (sol6 "Hello World") 11)
 
-(= (sol1 '(13)) 1)
+(= (sol6 [[1 2] [3 4] [5 6]]) 3)
 
-(= (sol1 '(:a :b :c)) 3)
+(= (sol6 '(13)) 1)
+
+(= (sol6 '(:a :b :c)) 3)
