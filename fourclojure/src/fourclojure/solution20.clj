@@ -12,7 +12,23 @@
 (defn sol3 [coll]
   (comp second reverse coll))
 
-(= (sol3 (list 1 2 3 4 5)) 4)
+;; solution 4
+(defn sol4 [coll]
+  (-> coll reverse rest first))
+
+;; solution 5
+(defn sol5 [coll]
+  (-> coll reverse second))
+
+;; solution 6
+(defn sol6 [coll]
+  (nth coll (-> coll count dec dec)))
+
+;; solution 7
+(defn sol7 [coll]
+  (nth (reverse coll) 1))
+
+(= (sol7 (list 1 2 3 4 5)) 4)
 
 (= (sol2 ["a" "b" "c"]) "b")
 
