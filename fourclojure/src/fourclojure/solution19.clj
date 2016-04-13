@@ -6,8 +6,8 @@
 
 (= (#(first(reverse %)) ["b" "c" "d"]) "d")
 
-;; solution 2
 
+;; solution 2
 (defn sol2 [coll]
   (.get coll(- (count coll) 1)))
 
@@ -15,9 +15,13 @@
 (defn sol3 [coll]
   (nth coll (dec (count coll))))
 
-(= (sol3 [1 2 3 4 5]) 5)
+;; solution 4
+(defn sol4 [coll]
+  (reduce (fn [a b] b) coll))
 
-(= (sol3 '(5 4 3)) 3)
+(= (sol4 [1 2 3 4 5]) 5)
+
+(= (sol4 '(5 4 3)) 3)
 
 (= (sol2 ["b" "c" "d"]) "d")
 
