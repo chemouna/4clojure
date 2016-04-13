@@ -40,6 +40,7 @@
 (defn nth-elt-9 [coll n]
   (last (take (+ n 1) (seq coll))))
 
+
 (= (nth-elt-9 '(4 5 6 7) 2) 6)
 
 (= (nth-elt-9 [:a :b :c] 0) :a)
