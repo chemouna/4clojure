@@ -25,10 +25,20 @@
 (defn sol5 [v coll]
   (zipmap coll (repeat (count coll) v)))
 
+;; solution 6
+(defn sol6 [v coll]
+  (apply hash-map (interleave coll (repeat v))))
 
-(= (sol5 0 [:a :b :c]) {:a 0 :b 0 :c 0})
+;; solution 7
+(defn sol7 [v coll]
+  (reduce
+   (fn [acc i] (conj acc [i v]))
+   {}
+   coll))
 
-(= (sol4 "x" [1 2 3]) {1 "x" 2 "x" 3 "x"})
+(= (sol7 0 [:a :b :c]) {:a 0 :b 0 :c 0})
 
-(= (sol4 [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]})
+(= (sol7 "x" [1 2 3]) {1 "x" 2 "x" 3 "x"})
+
+(= (sol7 [:a :b] [:foo :bar]) {:foo [:a :b] :bar [:a :b]})
 
