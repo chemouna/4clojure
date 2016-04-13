@@ -33,12 +33,16 @@
 (defn sol6 [coll]
   (reduce + (map (fn [_] 1) (seq coll))))
 
-(= (sol6 '(1 2 3 3 1)) 5)
+;; solution 7
+(defn sol7 [coll]
+  (-> coll (interleave (range)) last inc))
 
-(= (sol6 "Hello World") 11)
+(= (sol7 '(1 2 3 3 1)) 5)
 
-(= (sol6 [[1 2] [3 4] [5 6]]) 3)
+(= (sol7 "Hello World") 11)
 
-(= (sol6 '(13)) 1)
+(= (sol7 [[1 2] [3 4] [5 6]]) 3)
 
-(= (sol6 '(:a :b :c)) 3)
+(= (sol7 '(13)) 1)
+
+(= (sol7 '(:a :b :c)) 3)
