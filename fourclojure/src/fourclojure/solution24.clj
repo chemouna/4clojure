@@ -2,7 +2,7 @@
 
 ;; solution 1
 (defn sol1 [coll]
-  (reduce + 0 coll))
+  (reduce + coll))
 
 ;; solution 2
 (defn sol2 [coll]
