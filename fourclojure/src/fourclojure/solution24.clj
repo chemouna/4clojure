@@ -4,9 +4,13 @@
 (defn sol1 [coll]
   (reduce + 0 coll))
 
-(= (sol1 [1 2 3]) 6)
+;; solution 2
+(defn sol2 [coll]
+  (apply + coll))
 
-(= (sol1 (list 0 -2 5 5)) 8)
+(= (sol2 [1 2 3]) 6)
+
+(= (sol2 (list 0 -2 5 5)) 8)
 
 (= (sol1 #{4 2 1}) 7)
 
