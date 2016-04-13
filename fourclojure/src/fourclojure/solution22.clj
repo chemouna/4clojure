@@ -19,10 +19,14 @@
                coll
                0))
 
+;; solution 4
+(defn sol4 [coll]
+  (reduce + (map (constantly 1) coll)))
 
-(= (sol3 '(1 2 3 3 1)) 5)
 
-(= (sol3 "Hello World") 11)
+(= (sol4 '(1 2 3 3 1)) 5)
+
+(= (sol4 "Hello World") 11)
 
 (= (sol1 [[1 2] [3 4] [5 6]]) 3)
 
