@@ -28,10 +28,13 @@
 (defn nth-elt-6 [coll n]
   (last (take (+ n 1) coll)))
 
+;; solution 7
+(defn nth-elt-7 [coll n]
+  (first (nthnext coll n)))
 
-(= (nth-elt-6 '(4 5 6 7) 2) 6)
+(= (nth-elt-7 '(4 5 6 7) 2) 6)
 
-(= (nth-elt-6 [:a :b :c] 0) :a)
+(= (nth-elt-7 [:a :b :c] 0) :a)
 
 (= (nth-elt-1 [1 2 3 4] 1) 2)
 
