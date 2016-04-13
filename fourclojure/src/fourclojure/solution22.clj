@@ -41,13 +41,16 @@
 (defn sol8 [coll]
   (.size (vec coll)))
 
-(= (sol8 '(1 2 3 3 1)) 5)
+;; solution 9
+(defn sol9 [coll]
+  (apply + (map (fn [_] 1) coll)))
 
-(= (sol8 "Hello World") 11)
+(= (sol9 '(1 2 3 3 1)) 5)
 
-(= (sol8 [[1 2] [3 4] [5 6]]) 3)
+(= (sol9 "Hello World") 11)
 
-(= (sol8 '(13)) 1)
+(= (sol9 [[1 2] [3 4] [5 6]]) 3)
 
-(= (sol8 '(:a :b :c)) 3)
+(= (sol9 '(13)) 1)
 
+(= (sol9 '(:a :b :c)) 3)
