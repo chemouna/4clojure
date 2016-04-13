@@ -19,9 +19,14 @@
 (defn sol4 [coll]
   (reduce (fn [a b] b) coll))
 
-(= (sol4 [1 2 3 4 5]) 5)
+;; solution 5
+(defn sol5 [[n & more]]
+  (if more
+    (recur more) n))
 
-(= (sol4 '(5 4 3)) 3)
+(= (sol5 [1 2 3 4 5]) 5)
+
+(= (sol5 '(5 4 3)) 3)
 
 (= (sol2 ["b" "c" "d"]) "d")
 
