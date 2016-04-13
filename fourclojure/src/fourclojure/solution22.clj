@@ -23,10 +23,15 @@
 (defn sol4 [coll]
   (reduce + (map (constantly 1) coll)))
 
+;; solution 5
+(defn sol5 [coll]
+  (loop [s coll c 0]
+   (if (empty? s) c
+       (recur (next s) (inc c)))))
 
-(= (sol4 '(1 2 3 3 1)) 5)
+(= (sol5 '(1 2 3 3 1)) 5)
 
-(= (sol4 "Hello World") 11)
+(= (sol5 "Hello World") 11)
 
 (= (sol1 [[1 2] [3 4] [5 6]]) 3)
 
