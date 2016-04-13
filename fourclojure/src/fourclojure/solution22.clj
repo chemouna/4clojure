@@ -37,12 +37,17 @@
 (defn sol7 [coll]
   (-> coll (interleave (range)) last inc))
 
-(= (sol7 '(1 2 3 3 1)) 5)
+;; solution 8
+(defn sol8 [coll]
+  (.size (vec coll)))
 
-(= (sol7 "Hello World") 11)
+(= (sol8 '(1 2 3 3 1)) 5)
 
-(= (sol7 [[1 2] [3 4] [5 6]]) 3)
+(= (sol8 "Hello World") 11)
 
-(= (sol7 '(13)) 1)
+(= (sol8 [[1 2] [3 4] [5 6]]) 3)
 
-(= (sol7 '(:a :b :c)) 3)
+(= (sol8 '(13)) 1)
+
+(= (sol8 '(:a :b :c)) 3)
+
