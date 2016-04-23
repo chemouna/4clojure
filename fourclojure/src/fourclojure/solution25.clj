@@ -15,7 +15,10 @@
 (defn sol4 [col]
   (for [x col :when (odd? x)] x))
 
-(= (sol4 #{1 2 3 4 5}) '(1 3 5))
+(defn sol5 [col]
+  (filter #(-> (mod % 2) zero? not) col))
+
+(= (sol5 #{1 2 3 4 5}) '(1 3 5))
 
 (= (sol4 [4 2 1 6]) '(1))
 
