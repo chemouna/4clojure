@@ -17,6 +17,7 @@
     true
     (and (= (first coll) (last coll)) (recur (rest (drop-last coll))))))
 
+
 ;(defn sol2 [coll]
 ;  (let [re (split-at (rem (count coll) 2) coll)]
 ;   (= (first res) (rest res))))
