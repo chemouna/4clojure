@@ -1,7 +1,7 @@
 (ns fourclojure.solution27)
 
 (defn sol1 [coll]
-  (= coll (reverse coll)))
+  (= (seq coll) (reverse (seq coll))))
 
 (false? (sol1 '(1 2 3 4 5)))
 (true? (sol1 "racecar"))
