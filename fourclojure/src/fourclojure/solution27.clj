@@ -12,12 +12,17 @@
 (defn sol4 [coll]
   (every? true? (map = coll (reverse coll))))
 
+(defn sol5 [coll]
+  (if (< (count coll) 2)
+    true
+    (and (= (first coll) (last coll)) (recur (rest (drop-last coll))))))
+
 ;(defn sol2 [coll]
 ;  (let [re (split-at (rem (count coll) 2) coll)]
 ;   (= (first res) (rest res))))
 
-(false? (sol4 '(1 2 3 4 5)))
-(true? (sol4 "racecar"))
-(true? (sol4 [:foo :bar :foo]))
-(true? (sol4 '(1 1 3 3 1 1)))
-(false? (sol4 '(:a :b :c)))
+(false? (sol5 '(1 2 3 4 5)))
+(true? (sol5 "racecar"))
+(true? (sol5 [:foo :bar :foo]))
+(true? (sol5 '(1 1 3 3 1 1)))
+(false? (sol5 '(:a :b :c)))
