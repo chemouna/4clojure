@@ -18,9 +18,6 @@
     (and (= (first coll) (last coll)) (recur (rest (drop-last coll))))))
 
 
-;(defn sol2 [coll]
-;  (let [re (split-at (rem (count coll) 2) coll)]
-;   (= (first res) (rest res))))
 
 (false? (sol5 '(1 2 3 4 5)))
 (true? (sol5 "racecar"))
